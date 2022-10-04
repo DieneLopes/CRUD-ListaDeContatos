@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="estilo.css" rel="stylesheet">
+</head>
+
+<body class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1 class="titulo1 mt-4">Agenda de Contatos</h1>
+            
+            <h2 class="titulo2 ">Legend Of Zelda  <img src="tri.png" width="35px"></h2>
+        <hr>
+
+        <!-- Button trigger modal -->
+        <div class="row">
+            <div class="col ms-2">
+                <input id="input_busca" onkeyup="filtrar()" type="text" class="form-control" placeholder="Buscar Contato" style="border-radius: 25px; text-align: center; width: 170px;">
+            </div>
+
+            <div class="col me-2 text-end"> 
+                <button type="button" class="inserir btn btn-secondary" style="border-radius: 25px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Inserir novo contato
+                </button>
+
+            </div>
+        </div>
+                
+        <table class="table table-hover">
+            <thead>
+                <tr class="titulo3">
+                    <th> <input onclick="marcarTodos()" type="checkbox"> </th>
+                    <th >#</th>
+                    <th>Contato</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>        
+            <tbody class="texto" id="tabela_contatos" ></tbody>
+        </table>        
+    
+            <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content NovoContato">
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="exampleModalLabel">Novo Contato</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border-radius: 25px;"></button>
+
+                    </div>
+
+                    <form id="add" onsubmit="inserir()">
+                        <div class="modal-body">
+                                
+                            <input class="form-control form-control-lg mb-3" style="border-radius: 25px;" id="input_nome" placeholder="Novo Contato">
+
+                            <input type="number" class="form-control form-control-lg mb-3" style="border-radius: 25px;" id="input_telefone" placeholder="Telefone">
+
+                            <input class="form-control form-control-lg mb-3" style="border-radius: 25px;" id="input_endereco" placeholder="Endereço">
+            
+                        </div>
+
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-secondary" style="border-radius: 25px;" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-info" style="border-radius: 25px;">Salvar</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+            
+        <div class="offcanvas imagemLateral offcanvas-end" tabindex="-1" id="offcanvasEditar" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel"> Editar Contato</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="border-radius: 25px;"></button>
+
+            </div>
+            <div class="offcanvas-body">
+                <form id="form_editar" onsubmit="editar()" action="">
+                    <input type="hidden" id="input_editar_id">
+
+                    <label for="input_editar_nome">Nome do Contato</label>
+                    <input type="text" id="input_editar_nome" style="border-radius: 25px;" class="form-control mb-3">
+
+                    <label for="input_editar_telefone">Telefone</label>
+                    <input type="number" id="input_editar_telefone" style="border-radius: 25px;" class="form-control mb-3">
+
+                    <label for="input_editar_endereco">Endereço</label>
+                    <input type="text" id="input_editar_endereco" style="border-radius: 25px;" class="form-control mb-3">
+
+                    <div class="d-grid">
+                        <button class="btn btn-secondary" style="border-radius: 25px;">Salvar</button>
+                    </div>
+                </form>                
+            </div>
+        </div>          
+
+    </div>
+
+</div>    
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <script src="eventos.js"></script>
+    <script src="filtrar.js"></script>
+</body>
+</html>
