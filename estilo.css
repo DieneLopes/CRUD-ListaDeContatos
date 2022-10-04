@@ -1,5 +1,5 @@
 html > body { 
-    background: url(img/loz9.png) fixed;   /*para deixar o bg fixado e do tamanho da tela*/
+    background: url(img/loz9.png) fixed;   /*para deixar o bg fixado*/
     background-size: 88%;
     -moz-background-size: 90%;
     -o-background-size: 90;    
@@ -19,7 +19,7 @@ html > body {
     font-size: 20px;
     text-align: center;
     color: white;
-    background-color: rgb(0, 0, 0, 0.8) !important;
+    background-color: rgb(0, 0, 0, 0.8) !important;  /*opacidade do corpo da tabela*/
     border-radius: 10px;
 }
 
@@ -32,7 +32,7 @@ html > body {
 }
 
 .texto {
-    background-color: rgb(255, 255, 255, 0.8) !important;    
+    background-color: rgb(255, 255, 255, 0.8) !important;  /*opacidade do corpo da tabela*/
 }
 
 .imagemLateral {
