@@ -1,5 +1,5 @@
 html > body { 
-    background: url(loz9.png) fixed;   /*para deixar o bg fixado e do tamanho da tela*/
+    background: url(img/loz9.png) fixed;   /*para deixar o bg fixado e do tamanho da tela*/
     background-size: 88%;
     -moz-background-size: 90%;
     -o-background-size: 90;    
@@ -36,15 +36,15 @@ html > body {
 }
 
 .imagemLateral {
-    background-image: url(tri8.jpg);    
+    background-image: url(img/tri8.jpg);    
     background-position: center;
     background-repeat: no-repeat;
     background-size: 490px;
-    font-weight: bold;    
+    font-weight: bold;
 }
 
 .NovoContato {
-    background-image: url(tri8.jpg) ;
+    background-image: url(img/tri8.jpg) ;
     background-size: 600px;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,20 +57,21 @@ html > body {
 }
 
 .botaoEditar {
-    border-radius: 25px; 
+    border-radius: 10px; 
     background-color: #228B22; 
     color: white; 
     border: none; 
-    width: 70px; 
+    width: 45px; 
     height: 30px;
+    
 }
 
 .botaoExcluir {
-    border-radius: 25px; 
-    background-color: #483D8B; 
+    border-radius: 10px; 
+    background-color: rgb(202, 17, 17); 
     color: white; 
     border: none; 
-    width: 70px; 
+    width: 45px; 
     height: 30px;
 }
 

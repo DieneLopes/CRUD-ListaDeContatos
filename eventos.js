@@ -94,8 +94,8 @@ function atualizarLista() {
             return resposta.json();
         })
         .then(function (lista) {
-            lista.forEach(function (cadaContato) {
-                tabela_contatos.innerHTML += `
+            lista.forEach(function (cadaContato) { //usando simbolo material-icons para os botões editar e excluir abaixo
+                tabela_contatos.innerHTML += `   
                     <tr>
                         <td> <input data-check="acao" type="checkbox"> </td>
                         <td>${cadaContato.id}</td>
@@ -103,12 +103,12 @@ function atualizarLista() {
                         <td>${cadaContato.telefone}</td>
                         <td>${cadaContato.endereco}</td>
                         <td>
-                            <button onclick="buscarParaEditar(${cadaContato.id})" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditar" class="botaoEditar">
-                                Editar
-                            </button>
+                            <button onclick="buscarParaEditar(${cadaContato.id})" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditar" class="botaoEditar material-icons"> <span>edit</span>
+                                
+                            </button>   
 
-                            <button onclick="excluir(${cadaContato.id})" class="botaoExcluir">
-                                Excluir
+                            <button onclick="excluir(${cadaContato.id})" class="botaoExcluir material-icons"> <span>delete</span>
+                                
                             </button>                        
                         </td>
                     </tr>

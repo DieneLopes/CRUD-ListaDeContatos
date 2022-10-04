@@ -1,5 +1,5 @@
 ## Projeto Agenda de contatos
-Criar uma agenda de contatos no Javascript, utilizando Node.js, APIs e Bootstraps.
+Criar uma agenda de contatos no Javascript, utilizando Node.js, APIs e Bootstrap.
 Com objetivo de:
 - Inserir contatos com nome, telefone e endereço;
 - Editar contatos já existentes;
