@@ -1,9 +1,10 @@
 html > body { 
-    background: url(img/loz9.png) fixed;   /*para deixar o bg fixado*/
-    background-size: 88%;
+    background: url(img/loz4.png) fixed;   /*para deixar o bg fixado*/
+    background-size: 85%;
     -moz-background-size: 90%;
     -o-background-size: 90;    
-    background-color: white;
+    background-color: white;    
+    background-repeat: repeat-x;
 }
 
 .titulo1 {
